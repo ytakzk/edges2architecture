@@ -14,7 +14,7 @@ import os
 def run(dataroot):
 
     opt = TestOptions().parse()
-    opt.name = 'np2p_pix2pix'
+    opt.name = 'n2p_pix2pix'
     opt.dataroot = dataroot
 
     data_loader = CreateDataLoader(opt)

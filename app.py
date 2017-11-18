@@ -8,7 +8,7 @@ import io
 
 app = Flask(__name__)
 CORS(app)
-cors = CORS(app, resources={r"/generate/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/generate/*": {"origins": "https://ytakzk.github.io/"}})
 
 @app.route('/')
 def index():
@@ -48,4 +48,4 @@ def generate():
 
     return request.data
 
-app.run(debug=True, port=4999)
+app.run(port=5005, debug=False)

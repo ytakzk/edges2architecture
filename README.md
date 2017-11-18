@@ -13,9 +13,15 @@ This model can generate parametric design like images from drawing. The model is
 3. Run ```cd ./doc & python -m SimpleHTTPServer``` to launch the web client.
 4. Open ```localhost:8000``` from any browser.
 
+## Dependencies
+
+- [PyTorch](http://pytorch.org/)
+- ```pip install flask flask_cors dominate visdom```
+- ```cd vision & python setup.py install```
+
 ## Pix2pix model
 
-The generator is based on [https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix](CycleGAN-and-pix2pix-in-PyTorch) by [junyanz](https://github.com/junyanz)
+The generator is based on [CycleGAN-and-pix2pix-in-PyTorch](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) by [junyanz](https://github.com/junyanz).
 
 ## Environments
 

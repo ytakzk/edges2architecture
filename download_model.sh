@@ -6,6 +6,8 @@ D_ID=1BbPoZZyc-MlQ7Z9MjfdXgHLIyW5Auhd5
 
 echo $DIR
 mkdir -p $DIR
+mkdir -p ./drawing/
+mkdir -p ./transformed/
 
 curl -L "https://drive.google.com/uc?export=download&id=${D_ID}" -o $DIR"latest_net_D.pth"
 curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=${G_ID}" > /dev/null
