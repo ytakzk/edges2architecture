@@ -1,0 +1,3 @@
+[submodule "pix2pix/vision"]
+	path = pix2pix/vision
+	url = https://github.com/pytorch/vision

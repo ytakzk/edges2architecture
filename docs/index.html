@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Chathura:300" rel="stylesheet">
+  <link href="./index.css" rel="stylesheet">
+
+  <title>nonparametric to parametric</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>nonparametric to parametric</h1>
+
+    <div class="description">
+      <p>Parametric design is a process based on algorithms using parameters and rules. Changing parameters or geometry generates different design and of course easily reproduce the same design through the same parameters. In other words, parameters are necessary to define any shapes.</p>
+      <p>Although parametric design is thought as a methodology to generate unprecedented shapes, the appearance of every parametric design is similar each other.  Ironically, the possibility of parametric design that can generate any shape is limited for now. This project aims to reveal the situation and to show that the current parametric design can be generated from the old-fashion procedure of hand-writing.</p>
+      <p>This model can generate parametric design like images from drawing. The model is based on CycleGAN and the training images are scraped from Pinterest.</p>
+    </div>
+
+    <div class="source">
+      <canvas class="canvas" id="app" width="256" height="256"></canvas>
+      <div class="menu">
+          <div class="clear" id="clear">clear</div>
+      </div>
+    </div>
+
+    <div class="transformer">
+      <span class="line"></span>
+      <button id="transform">transform</button>
+    </div>
+
+    <div class="destination">
+      <img src="" id="transformed" alt="" width="256" height="256">
+    </div>
+
+    <footer>
+      <p>download the model via <a href="https://github.com/ytakzk/n2p">github</a></p>
+      <address><a href="https://ytakzk.me" target="_blank">ytakzk.me</a></address>
+    </footer>
+
+  </div>
+
+  <section class="spinner-container" id="spinner">
+    <div class="spinner">
+      <div class="rect1"></div>
+      <div class="rect2"></div>
+      <div class="rect3"></div>
+      <div class="rect4"></div>
+      <div class="rect5"></div>
+    </div>
+  </section>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
