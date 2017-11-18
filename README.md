@@ -25,7 +25,3 @@ The generator is based on [https://github.com/junyanz/pytorch-CycleGAN-and-pix2p
 ## Author
 ytakzk  
  [https://ytakzk.me](https://ytakzk.me)
-
-## License
-Fusuma is released under the MIT license.  
-See LICENSE for details.
