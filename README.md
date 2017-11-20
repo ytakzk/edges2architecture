@@ -1,10 +1,10 @@
-## nonparametric to parametric (still in progress)
+## edges2architecture (still in progress)
 
-Parametric design is a process based on algorithms using parameters and rules. Changing parameters or geometry generates different design and of course easily reproduce the same design through the same parameters. In other words, parameters are necessary to define any shapes.
+Architects develop their ideas from drawings. These days, they also create digital models with 3DCAD software to create more realistic images to express their idea before constructing.
 
-Although parametric design is thought as a methodology to generate unprecedented shapes, the appearance of every parametric design is similar each other. Ironically, the possibility of parametric design that can generate any shape is limited for now. This project aims to reveal the situation and to show that the current parametric design can be generated from the old-fashion procedure of hand-writing.
+This project is an experimental project for developing photo realistic architecture through drawing. The rough sketches become architecture.
 
-This model can generate parametric design like images from drawing. The model is based on pix2pix, and the training images are scraped from Pinterest.
+The model is based on pix2pix and the training images are scraped from Pinterest.
 
 ## Setup
 
