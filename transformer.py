@@ -11,10 +11,10 @@ import time
 from PIL import Image
 import os
 
-def run(dataroot):
+def run(dataroot, model_name):
 
     opt = TestOptions().parse()
-    opt.name = 'n2p_pix2pix'
+    opt.name = model_name
     opt.dataroot = dataroot
 
     data_loader = CreateDataLoader(opt)

@@ -1,15 +1,17 @@
 #!/bin/sh
 
-DIR=./pix2pix/checkpoints/n2p_pix2pix/
-G_ID=175tL-gTcwCz6QC1qSJU2E53UkZS24y41
-D_ID=1BbPoZZyc-MlQ7Z9MjfdXgHLIyW5Auhd5
+download () {
+  echo $1
+  mkdir -p $1
 
-echo $DIR
-mkdir -p $DIR
-mkdir -p ./drawing/
-mkdir -p ./transformed/
+  curl -L "https://drive.google.com/uc?export=download&id=$2" -o $1"latest_net_D.pth"
+  curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=$3" > /dev/null
+  CODE="$(awk '/_warning_/ {print $NF}' /tmp/cookie)"
+  curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${CODE}&id=$3" -o $1"latest_net_G.pth"
+}
 
-curl -L "https://drive.google.com/uc?export=download&id=${D_ID}" -o $DIR"latest_net_D.pth"
-curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=${G_ID}" > /dev/null
-CODE="$(awk '/_warning_/ {print $NF}' /tmp/cookie)"
-curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${CODE}&id=${G_ID}" -o $DIR"latest_net_G.pth"
+DIR=./pix2pix/checkpoints/edges2architecture_pix2pix/
+D_ID=1hqiamYzgiEaMMznzR1aQeft6rnCmecOb
+G_ID=1fb-kf9QuiekY5RhVwt1eY7_8_ryOmy0x
+
+download $DIR $D_ID $G_ID

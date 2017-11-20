@@ -1,4 +1,4 @@
-from flask import Flask, request
+ from flask import Flask, request
 from flask_cors import CORS
 import base64
 import time
@@ -20,8 +20,9 @@ def generate():
     if not 'data' in request.form:
         abort(400)
 
-    data = request.form['data']
-
+    data  = request.form['data']
+    model = request.form['model']
+    print(model)
     now = str(int(time.time()))
     name = now + '.png'
 
@@ -37,7 +38,7 @@ def generate():
         img = Image.open(drawing_path)
 
         transformer.createCombinedImage(img, combined_dir)
-        result = transformer.run(combined_dir)
+        result = transformer.run(combined_dir, model)
         transformed = Image.fromarray(result, 'RGB')
 
         output = io.BytesIO()
@@ -48,4 +49,4 @@ def generate():
 
     return request.data
 
-app.run(port=5005, debug=False)
+app.run(port=5005)

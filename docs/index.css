@@ -1,16 +1,14 @@
 html {
   background: #000;
   color: white;
-  /*font-family: 'Barlow Semi Condensed', sans-serif;*/
-  /*font-family: 'Josefin Slab', serif;*/
-  font-family: 'Chathura', sans-serif;
-  font-size: 29px;
-  line-height: 1.5rem;
+  font-family: 'Khula', sans-serif;
+  line-height: 1.4rem;
 }
 
 h1 {
   text-align: center;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.05rem;
+  padding: 20px 0;
 }
 
 .container {
@@ -58,8 +56,8 @@ h1 {
   z-index: 999;
   height: 36px;
   cursor: pointer;
-  font-family: 'Chathura', sans-serif;
-  padding-top: 0px;
+  font-family: 'Khula', sans-serif;
+  padding-top: 6px;
   background: #fff;
   -webkit-appearance: none;
   border-radius: 0;
@@ -87,6 +85,10 @@ footer a {
 footer address a {
   font-style: normal;
   text-decoration: none;
+}
+
+.examples {
+  display: none;
 }
 
 /*spinner*/

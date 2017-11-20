@@ -7,11 +7,16 @@
     var ctx = canvas.getContext('2d');
     ctx.beginPath();
     ctx.fillStyle = "#000";
-    ctx.fillRect(0, 0, 700, 400);
+    ctx.fillRect(0, 0, 1000, 1000);
 
-    var defosize = 2.5;
+    canvas.width *= devicePixelRatio;
+    canvas.height *= devicePixelRatio;
+    canvas.style.width = String(canvas.width / devicePixelRatio) + "px";
+    canvas.style.height = String(canvas.height / devicePixelRatio) + "px";
+
+    var defosize = 1.0;
     var defocolor = "#fff";
-    var defoalpha = 0.98;
+    var defoalpha = 1.0;
 
     var mouseX = "";
     var mouseY = "";
@@ -24,8 +29,8 @@
     function onMove(e) {
         if (e.buttons === 1 || e.witch === 1) {
             var rect = e.target.getBoundingClientRect();
-            var X = ~~(e.clientX - rect.left);
-            var Y = ~~(e.clientY - rect.top);
+            var X = ~~(e.clientX - rect.left) * devicePixelRatio;
+            var Y = ~~(e.clientY - rect.top) * devicePixelRatio;;
             draw(X, Y);
         };
     };
@@ -33,8 +38,8 @@
     function onClick(e) {
         if (e.button === 0) {
             var rect = e.target.getBoundingClientRect();
-            var X = ~~(e.clientX - rect.left);
-            var Y = ~~(e.clientY - rect.top);
+            var X = ~~(e.clientX - rect.left) * devicePixelRatio;;
+            var Y = ~~(e.clientY - rect.top) * devicePixelRatio;;
 
             draw(X, Y);
         }
@@ -67,7 +72,7 @@
       ctx.beginPath();
       ctx.fillStyle = "#000";
       ctx.globalAlpha = 1.0;
-      ctx.fillRect(0, 0, 700, 400);
+      ctx.fillRect(0, 0, 1000, 1000);
 
     }, false);
 
@@ -78,8 +83,9 @@
 
       var params = new URLSearchParams();
       params.append('data', data.replace(/^.*,/, ''));
+      params.append('model', 'edges2architecture_pix2pix');
 
-      axios.post('https://n2p.ytakzk.me/generate', params)
+      axios.post('https://e2a.ytakzk.me/generate', params)
       .then(function(response) {
         transformed.src = 'data:image/png;base64,' + response.data;
 
@@ -93,4 +99,7 @@
     }, false);
 
     spinner.style.top = (window.outerHeight - spinner.clientHeight) * 0.48 + 'px';
+
+    ctx.drawImage(document.getElementById('a1'), 0, 0);
+
 })();
