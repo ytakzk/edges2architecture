@@ -1,4 +1,4 @@
- from flask import Flask, request
+from flask import Flask, request
 from flask_cors import CORS
 import base64
 import time
