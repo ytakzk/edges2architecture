@@ -80,7 +80,7 @@
 
     document.getElementById("random").addEventListener("click", function() {
 
-      randomIndex = (randomIndex < 3) ? randomIndex + 1 : 1;
+      randomIndex = (randomIndex < 4) ? randomIndex + 1 : 1;
       ctx.drawImage(document.getElementById('a' + randomIndex), 0, 0);
       transformed.src = './examples/B' + randomIndex + '.jpg';
     }, false);
