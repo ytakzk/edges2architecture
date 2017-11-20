@@ -4,6 +4,15 @@
     var transformed = document.getElementById('transformed');
     var spinner = document.getElementById('spinner');
 
+    var defosize = 1.0;
+    var defocolor = "#fff";
+    var defoalpha = 1.0;
+
+    var mouseX = "";
+    var mouseY = "";
+
+    var randomIndex = 1;
+
     var ctx = canvas.getContext('2d');
     ctx.beginPath();
     ctx.fillStyle = "#000";
@@ -13,13 +22,6 @@
     canvas.height *= devicePixelRatio;
     canvas.style.width = String(canvas.width / devicePixelRatio) + "px";
     canvas.style.height = String(canvas.height / devicePixelRatio) + "px";
-
-    var defosize = 1.0;
-    var defocolor = "#fff";
-    var defoalpha = 1.0;
-
-    var mouseX = "";
-    var mouseY = "";
 
     canvas.addEventListener('mousemove', onMove, false);
     canvas.addEventListener('mousedown', onClick, false);
@@ -74,6 +76,13 @@
       ctx.globalAlpha = 1.0;
       ctx.fillRect(0, 0, 1000, 1000);
 
+    }, false);
+
+    document.getElementById("random").addEventListener("click", function() {
+
+      randomIndex = (randomIndex < 3) ? randomIndex + 1 : 1;
+      ctx.drawImage(document.getElementById('a' + randomIndex), 0, 0);
+      transformed.src = './examples/B' + randomIndex + '.jpg';
     }, false);
 
     document.getElementById("transform").addEventListener("click", function() {

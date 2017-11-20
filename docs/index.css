@@ -30,8 +30,15 @@ h1 {
   vertical-align: top;
 }
 
-.source .clear {
+.source .menu-button {
+  padding-top: 1px;
   cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.source .random {
+  text-align: right;
 }
 
 .transformer {
