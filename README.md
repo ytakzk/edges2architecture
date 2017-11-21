@@ -1,10 +1,9 @@
 ## edges2architecture (still in progress)
 
-Architects develop their ideas from drawings. These days, they also create digital models with 3DCAD software to create more realistic images to express their idea before constructing.
+This is an experimental project for developing photo realistic architecture from drawings. Architects develop their ideas from drawings. It is no exaggeration to say that drawing is the source of architecture. In general, the sketches are quite rough and conceptual because it takes a long time to draw detailed sketches. These days, they also use computers to represent their ideas with 3D CAD (computer-aided design) software instead of drawing by hand. As the name suggests, computers help us embody our ideas. However, they have to model the architecture in mind on computers, decide the texture, then render them. (The rendering sometimes takes more than 24 hours.)
+This project aims to skip the process of drawing detailed illustration and modeling on computers. ‘edge2architecture’ will dramatically reduce the time to produce photo realistic architecture. It means that architects can concentrate on developing a creative concept. This is the genuine computer-aided design tool.
 
-This project is an experimental project for developing photo realistic architecture through drawing. The rough sketches become architecture.
-
-The model is based on pix2pix and the training images are scraped from Pinterest.
+The model here is based on pix2pix and the training images are scraped from Pinterest.
 
 ## Setup
 
