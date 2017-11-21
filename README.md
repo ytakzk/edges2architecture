@@ -5,6 +5,10 @@ This project aims to skip the process of drawing detailed illustration and model
 
 The model here is based on pix2pix and the training images are scraped from Pinterest.
 
+## Examples
+
+![examples](./images/examples.png)
+
 ## Setup
 
 1. Run ```./download_model.sh``` to download the n2p model.
