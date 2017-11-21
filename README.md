@@ -7,7 +7,7 @@ The model here is based on pix2pix and the training images are scraped from Pint
 
 ## Examples
 
-![examples](./images/examples.png)
+![examples](./images/examples.jpg)
 
 ## Setup
 
