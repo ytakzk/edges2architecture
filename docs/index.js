@@ -3,6 +3,10 @@
     var canvas = document.getElementById('app');
     var transformed = document.getElementById('transformed');
     var spinner = document.getElementById('spinner');
+    var line   = document.getElementById('line');
+    var eraser = document.getElementById('eraser');
+
+    var isLine = true;
 
     var defosize = 1.0;
     var defocolor = "#fff";
@@ -57,8 +61,8 @@
         }
         ctx.lineTo(X, Y);
         ctx.lineCap = "round";
-        ctx.lineWidth = defosize * 2;
-        ctx.strokeStyle = defocolor;
+        ctx.lineWidth = isLine ? defosize * 2 : 10;
+        ctx.strokeStyle = isLine ? defocolor : ctx.fillStyle;
         ctx.stroke();
         mouseX = X;
         mouseY = Y;
@@ -68,6 +72,22 @@
         mouseX = "";
         mouseY = "";
     }
+
+    line.addEventListener("click", function() {
+
+      isLine = true;
+      line.classList.add("input-on");
+      eraser.classList.remove("input-on");
+
+    }, false);
+
+    eraser.addEventListener("click", function() {
+
+      isLine = false;
+      eraser.classList.add("input-on");
+      line.classList.remove("input-on");
+
+    }, false);
 
     document.getElementById("clear").addEventListener("click", function() {
 
@@ -80,7 +100,7 @@
 
     document.getElementById("random").addEventListener("click", function() {
 
-      randomIndex = (randomIndex < 4) ? randomIndex + 1 : 1;
+      randomIndex = (randomIndex < 7) ? randomIndex + 1 : 1;
       ctx.drawImage(document.getElementById('a' + randomIndex), 0, 0);
       transformed.src = './examples/B' + randomIndex + '.jpg';
     }, false);
