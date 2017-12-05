@@ -12,15 +12,15 @@ download () {
 
 DIR=./pix2pix/checkpoints/$1/
 echo $DIR
-if [ "$1" = "oscar_pix2pix" ]; then
-  D_ID=1hqiamYzgiEaMMznzR1aQeft6rnCmecOb
-  G_ID=1fb-kf9QuiekY5RhVwt1eY7_8_ryOmy0x
-elif [ "$1" = "oscar2_pix2pix" ]; then
+if [ "$1" = "oscar2_pix2pix" ]; then
   D_ID=1bz7-3hsKB6wS_-RPSeDqrdmkiO-14SoF
   G_ID=1IaV0oelKr0rp-G3U9slr33aCPJY_Id0n
 elif [ "$1" = "gehry_pix2pix" ]; then
   D_ID=1KQDOlnmmHir0q87T9z8nBespiNPpPALz
   G_ID=1Eug6dPY0lyAfqmUnOsiNJpQVzdSgnDN5
+else
+  D_ID=1hqiamYzgiEaMMznzR1aQeft6rnCmecOb
+  G_ID=1fb-kf9QuiekY5RhVwt1eY7_8_ryOmy0x
 fi;
 
 download $DIR $D_ID $G_ID
