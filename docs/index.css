@@ -1,8 +1,27 @@
 html {
   background: #000;
   color: white;
-  font-family: 'Khula', sans-serif;
-  line-height: 1.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.3rem;
+  font-size: 15px;
+}
+
+html::after {
+  content: "";
+  background-image: url('./examples/B7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+p {
+  font-weight: 300;
 }
 
 h1 {
@@ -82,8 +101,8 @@ h1 {
   z-index: 999;
   height: 36px;
   cursor: pointer;
-  font-family: 'Khula', sans-serif;
-  padding-top: 6px;
+  font-family: 'Cormorant Garamond', serif;
+  padding-top: 3px;
   background: #fff;
   -webkit-appearance: none;
   border-radius: 0;
